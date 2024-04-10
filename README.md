@@ -1,2 +1,3 @@
 ### GitHub Pages:
-https://27ugeen.github.io/goit-markup-hw-01/index.html
+
+https://27ugeen.github.io/goit-markup-hw-02/portfolio.html
