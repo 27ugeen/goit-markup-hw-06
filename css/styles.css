@@ -85,12 +85,17 @@ a {
 }
 /* Buttons */
 .btn {
+  display: block;
+
   font-weight: 500;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
-  color: var(--brand-cl);
-  background: var(--second-light-txt-cl);
+  color: var(--light-txt-cl);
+  background-color: var(--brand-cl);
+  box-shadow: 0 4px 4px 0 #00000026;
   border: none;
+  border-radius: 4px;
 }
 .btn-accent:hover,
 .btn-accent:focus {
@@ -173,7 +178,13 @@ a {
 .section-order {
   background: var(--main-txt-cl);
 }
+.section-order .container {
+  padding: 188px 0;
+}
 .main-title {
+  max-width: 496px;
+  margin: 0 auto;
+  margin-bottom: 48px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -181,13 +192,10 @@ a {
   color: var(--light-txt-cl);
 }
 .btn-order {
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--light-txt-cl);
-  background-color: var(--brand-cl);
-
-  box-shadow: 0 4px 4px 0 #00000026;
-  border-radius: 4px;
+  margin: 0 auto;
+  min-width: 169px;
+  min-height: 56px;
+  padding: 16px 32px;
 }
 /* #endregion */
 
