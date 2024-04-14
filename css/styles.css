@@ -1,161 +1,211 @@
 :root {
-    /* Fonts */
-    --main-font: "Roboto", sans-serif;
-    --second-font: "Raleway", sans-serif;
-    /* Colors */
-    --brand-cl: #4d5ae5;
-    --focus-cl: #404bbf;
-    --main-txt-cl: #2e2f42;
-    --second-txt-cl: #434455;
-    --light-txt-cl: #ffffff;
-    --second-light-txt-cl: #f4f4fd;
+  /* Fonts */
+  --main-font: 'Roboto', sans-serif;
+  --second-font: 'Raleway', sans-serif;
+  /* Colors */
+  --brand-cl: #4d5ae5;
+  --focus-cl: #404bbf;
+  --main-txt-cl: #2e2f42;
+  --second-txt-cl: #434455;
+  --light-txt-cl: #ffffff;
+  --second-light-txt-cl: #f4f4fd;
+  --border-cl: #e7e9fc;
 }
 
 /* Base styles */
 body {
-    font-family: var(--main-font);
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--main-txt-cl);
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--main-txt-cl);
 }
-a {
-    color: currentColor;
-    text-decoration: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 ul,
 ol {
-    list-style-type: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
+ul,
 button {
-    font-family: inherit;
-    line-height: inherit;
-    color: currentColor;
-    cursor: pointer;
+  font-family: inherit;
+  line-height: inherit;
+  color: currentColor;
+  cursor: pointer;
 }
-address {
-    font-style: normal;
+a {
+  color: currentColor;
+  text-decoration: none;
 }
 
 /* #region Common styles */
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
 }
 /* Logo */
 .logo {
-    font-family: var(--second-font);
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+  font-family: var(--second-font);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-right: 76px;
 }
 .logo-decor {
-    color: var(--brand-cl);
+  color: var(--brand-cl);
 }
 /* Buttons */
 .btn {
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-align: center;
-    color: var(--brand-cl);
-    background: var(--second-light-txt-cl);
-    border: none;
-  }
-  .btn-accent:hover,
-  .btn-accent:focus {
-    color: var(--light-txt-cl);
-    background: var(--focus-cl);
-  }
-  /* Sectons */
-  .section-title {
-      font-weight: 700;
-      font-size: 36px;
-      line-height: 1.11;
-      text-transform: capitalize;
-      text-align: center;
-  }
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--brand-cl);
+  background: var(--second-light-txt-cl);
+  border: none;
+}
+.btn-accent:hover,
+.btn-accent:focus {
+  color: var(--light-txt-cl);
+  background: var(--focus-cl);
+}
+/* Sectons */
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-transform: capitalize;
+  text-align: center;
+}
 /* #endregion */
 
 /* #region Header */
+.header .container {
+  display: flex;
+  align-items: center;
+}
+.header {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-cl);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  /* flex-grow: 1; */
+  /* margin-right: 332px; */
+}
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
 .nav-item {
-    font-weight: 500;
+  font-weight: 500;
+}
+.address {
+  margin-left: auto;
+  font-style: normal;
+}
+.address-list {
+  display: flex;
+  gap: 40px;
 }
 .address-item {
-    font-weight: 400;
-    color: var(--second-txt-cl);
+  font-weight: 400;
+  color: var(--second-txt-cl);
 }
 .nav-item:hover,
 .nav-item:focus,
 .address-item:hover,
 .address-item:focus {
-    color: var(--focus-cl);
+  color: var(--focus-cl);
 }
 /* #endregion */
 
 /* #region Portfolio */
 .btn-filter {
-    border-radius: 4px;
+  border-radius: 4px;
 }
 .btn-filter:hover,
 .btn-filter:focus {
-    box-shadow: 0 2px 2px 0 #0000001f, 0 2px 1px 0 #00000014, 0 3px 1px 0 #0000001a;
+  box-shadow: 0 2px 2px 0 #0000001f, 0 2px 1px 0 #00000014,
+    0 3px 1px 0 #0000001a;
 }
 .section-subtitle {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
 }
 .section-descript {
-    color: var(--second-txt-cl);
+  color: var(--second-txt-cl);
 }
 /* #endregion */
 
 /* #region Order */
 .section-order {
-    background: var(--main-txt-cl);
+  background: var(--main-txt-cl);
 }
 .main-title {
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
-    text-align: center;
-    color: var(--light-txt-cl);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  color: var(--light-txt-cl);
 }
 .btn-order {
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    color: var(--light-txt-cl);
-    background-color: var(--brand-cl);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--light-txt-cl);
+  background-color: var(--brand-cl);
 
-    box-shadow: 0 4px 4px 0 #00000026;
-    border-radius: 4px;
+  box-shadow: 0 4px 4px 0 #00000026;
+  border-radius: 4px;
 }
 /* #endregion */
 
 /* #region Team */
 .section-team {
-    background-color: var(--second-light-txt-cl);
+  background-color: var(--second-light-txt-cl);
 }
 .team-item {
-    box-shadow: 0 2px 1px 0 #2e2f4214, 0 1px 1px 0 #2e2f4229, 0 1px 6px 0 #2e2f4214;
-    border-radius: 0 0 4px 4px;
-    background-color: var(--light-txt-cl);
+  box-shadow: 0 2px 1px 0 #2e2f4214, 0 1px 1px 0 #2e2f4229,
+    0 1px 6px 0 #2e2f4214;
+  border-radius: 0 0 4px 4px;
+  background-color: var(--light-txt-cl);
 }
 /* #endregion */
 
 /* #region Footer */
 .footer {
-    color: var(--second-light-txt-cl);
-    background-color: var(--main-txt-cl);
+  color: var(--second-light-txt-cl);
+  background-color: var(--main-txt-cl);
 }
 /* #endregion Footer */
