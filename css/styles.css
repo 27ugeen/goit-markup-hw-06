@@ -10,6 +10,10 @@
   --light-txt-cl: #ffffff;
   --second-light-txt-cl: #f4f4fd;
   --border-cl: #e7e9fc;
+  /* Others */
+  --indent-col: 24px;
+  --indent-row: var(--indent-col);
+  --items: 3;
 }
 
 /* Base styles */
@@ -78,7 +82,6 @@ a {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 76px;
 }
 .logo-decor {
   color: var(--brand-cl);
@@ -86,7 +89,6 @@ a {
 /* Buttons */
 .btn {
   display: block;
-
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -104,11 +106,37 @@ a {
 }
 /* Sectons */
 .section-title {
+  max-width: 496px;
+  margin: 0 auto 72px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-transform: capitalize;
   text-align: center;
+}
+.section-subtitle {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.section-descript {
+  color: var(--second-txt-cl);
+}
+/* Card set */
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--indent-row, 48px);
+  column-gap: var(--indent-col, 24px);
+}
+.card-set-item {
+  flex-basis: calc(
+    (100% - var(--indent-col, 24px) * (var(--items, 3) - 1)) / var(--items, 3)
+  );
+}
+.card-set-info {
+  padding: 32px 0;
 }
 /* #endregion */
 
@@ -120,6 +148,9 @@ a {
 .header {
   padding: 24px 0;
   border-bottom: 1px solid var(--border-cl);
+}
+.header-logo {
+  margin-right: 76px;
 }
 .nav {
   display: flex;
@@ -164,14 +195,6 @@ a {
   box-shadow: 0 2px 2px 0 #0000001f, 0 2px 1px 0 #00000014,
     0 3px 1px 0 #0000001a;
 }
-.section-subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-}
-.section-descript {
-  color: var(--second-txt-cl);
-}
 /* #endregion */
 
 /* #region Order */
@@ -199,9 +222,32 @@ a {
 }
 /* #endregion */
 
+/* #region Principles */
+.principles {
+  padding-top: 120px;
+}
+.principles-list {
+  display: flex;
+  gap: 24px;
+}
+.principles-item {
+  flex-basis: calc((100% - 72px / 4));
+}
+/* #endregion */
+
+/* #region Examples */
+.examples {
+  padding: 120px 0;
+}
+/* #endregion */
+
 /* #region Team */
-.section-team {
+.team {
+  padding: 120px 0;
   background-color: var(--second-light-txt-cl);
+}
+.team-list {
+  --items: 4;
 }
 .team-item {
   box-shadow: 0 2px 1px 0 #2e2f4214, 0 1px 1px 0 #2e2f4229,
@@ -209,11 +255,22 @@ a {
   border-radius: 0 0 4px 4px;
   background-color: var(--light-txt-cl);
 }
+.team-info {
+  text-align: center;
+}
 /* #endregion */
 
 /* #region Footer */
 .footer {
+  padding: 100px 0;
   color: var(--second-light-txt-cl);
   background-color: var(--main-txt-cl);
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 16px;
+}
+.footer-txt {
+  max-width: 264px;
 }
 /* #endregion Footer */
