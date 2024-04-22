@@ -11,6 +11,7 @@
   --second-light-txt-cl: #f4f4fd;
   --border-cl: #e7e9fc;
   --helper-txt-cl: #8e8f99;
+  --valid-cl: #31d0aa;
   /* Others */
   --indent-col: 24px;
   --indent-row: var(--indent-col);
@@ -143,6 +144,42 @@ a {
   padding: 32px 16px;
 }
 /* #endregion */
+
+/* #region Socials */
+.socials-list {
+  display: flex;
+  gap: 16px;
+}
+.socials-title {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 1em;
+  color: var(--light-txt-cl);
+}
+.socials-item {
+  width: 40px;
+  height: 40px;
+}
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: var(--light-txt-cl);
+  background-color: var(--brand-cl);
+  transition: var(--trns-fast);
+  transition-property: background-color;
+}
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--valid-cl);
+}
+.socials-icon {
+  fill: currentColor;
+}
+/* #endregion Socials */
 
 /* #region Header */
 .header .container {
@@ -291,6 +328,16 @@ a {
 .team-info {
   text-align: center;
 }
+.team-descript {
+  margin-bottom: 8px;
+}
+.socials-team-list {
+  gap: 24px;
+}
+.socials-team-link:hover,
+.socials-team-link:focus {
+  background-color: var(--focus-cl);
+}
 /* #endregion */
 
 /* #region Customers */
@@ -402,5 +449,11 @@ a {
 }
 .footer-txt {
   max-width: 264px;
+}
+
+.footer-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 120px;
 }
 /* #endregion Footer */
