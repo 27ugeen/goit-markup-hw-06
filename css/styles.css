@@ -76,6 +76,9 @@ a {
   clip-path: inset(50%);
   overflow: hidden;
 }
+.current {
+  color: var(--focus-cl);
+}
 /* Logo */
 .logo {
   font-family: var(--second-font);
@@ -196,6 +199,9 @@ a {
 .address-item {
   font-weight: 400;
   color: var(--second-txt-cl);
+
+  transition: var(--trns-fast);
+  transition-property: color;
 }
 .nav-link:hover,
 .nav-link:focus,
@@ -327,6 +333,37 @@ a {
   border: 1px solid var(--border-cl);
   border-top: transparent;
 }
+.portfolio-box {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--second-light-txt-cl);
+  background-color: var(--brand-cl);
+  transition: var(--trns-slow);
+  transition-property: transform;
+}
+.portfolio-item:hover .overlay {
+  transform: translateY(0);
+  filter: blur(0px);
+}
+.bestsellers-img {
+  border-radius: 15px 15px 0 0;
+}
+
 .btn-filter {
   min-width: 69px;
   padding: 12px 24px;
@@ -335,6 +372,9 @@ a {
   border: 1px solid var(--border-cl);
   border-radius: 4px;
   box-shadow: none;
+
+  transition: var(--trns-slow);
+  transition-property: color, background-color, border-color, box-shadow;
 }
 .btn-filter:hover,
 .btn-filter:focus {
