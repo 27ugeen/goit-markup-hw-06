@@ -228,6 +228,15 @@ a {
 .principles-item {
   flex-basis: calc((100% - 72px / 4));
 }
+.principles-wrapper {
+  height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--second-light-txt-cl);
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
 /* #endregion */
 
 /* #region Examples */
