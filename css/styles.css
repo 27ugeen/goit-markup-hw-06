@@ -1,3 +1,4 @@
+/* #region root */
 :root {
   /* Fonts */
   --main-font: 'Roboto', sans-serif;
@@ -23,8 +24,9 @@
   --trns-slow: 600ms ease-out;
   --trns-fast: 300ms ease-in;
 }
+/* #endregion */
 
-/* Base styles */
+/* #region Base styles */
 body {
   font-family: var(--main-font);
   font-size: 16px;
@@ -62,6 +64,7 @@ a {
   color: currentColor;
   text-decoration: none;
 }
+/* #endregion */
 
 /* #region Common styles */
 .container {
@@ -412,7 +415,8 @@ a {
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
-.portfolio-item:hover .overlay {
+.portfolio-link:hover .overlay,
+.portfolio-link:focus .overlay {
   transform: translateY(0);
   filter: blur(0px);
 }
@@ -466,7 +470,7 @@ a {
 }
 /* #endregion Footer */
 
-/* #region Modal window*/
+/* #region Modal window */
 .backdrop {
   position: fixed;
   inset: 0;
@@ -525,6 +529,14 @@ a {
   border-radius: 50%;
 }
 .modal-btn-icon {
-  fill: var(--main-txt-cl);
+  stroke: var(--main-txt-cl);
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--brand-cl);
+}
+.modal-btn:hover .modal-btn-icon,
+.modal-btn:focus .modal-btn-icon {
+  stroke: var(--light-txt-cl);
 }
 /* #endregion */
