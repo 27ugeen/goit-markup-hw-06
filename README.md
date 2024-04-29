@@ -1,3 +1,3 @@
 ### GitHub Pages:
 
-https://27ugeen.github.io/goit-markup-hw-04/index.html
+https://27ugeen.github.io/goit-markup-hw-05/index.html
