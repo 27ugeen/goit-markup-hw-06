@@ -409,8 +409,13 @@ a {
 /* #endregion */
 /* #region Team */
 .team {
-  padding: 120px 0;
+  padding: 96px 0;
   background-color: var(--second-light-txt-cl);
+}
+@media only screen and (min-width: 1158px) {
+  .principles {
+    padding: 120px 0;
+  }
 }
 .team-list {
   --items: 1;
@@ -450,10 +455,28 @@ a {
 /* #endregion */
 /* #region Customers */
 .customers {
-  padding: 120px 0;
+  padding: 96px 0;
+}
+@media only screen and (min-width: 1158px) {
+  .customers {
+    padding: 120px 0;
+  }
 }
 .customers-list {
-  --items: 6;
+  --items: 2;
+  --indent-row: 72px;
+  --indent-col: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .customers-list {
+    --items: 3;
+    --indent-col: 24px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .customers-list {
+    --items: 6;
+  }
 }
 .customers-link {
   display: flex;
