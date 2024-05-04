@@ -90,9 +90,7 @@ a {
   max-width: 428px;
   padding: 0 16px;
   margin: 0 auto;
-  /* max-width: 1158px;
-  padding: 0 15px;
-  */
+
   outline: 2px solid red;
   outline-offset: -2px;
 }
@@ -105,7 +103,7 @@ a {
 /* Desktop styles */
 @media only screen and (min-width: 1158px) {
   .container {
-    max-width: 1128px;
+    max-width: 1158px;
     padding: 0 15px;
   }
 }
@@ -139,7 +137,7 @@ a {
   color: var(--light-txt-cl);
   background: var(--focus-cl);
 }
-/* Sectons */
+/* Sections */
 .section-title {
   margin-bottom: 72px;
   font-weight: 700;
@@ -150,36 +148,26 @@ a {
 }
 .section-subtitle {
   margin-bottom: 8px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-}
-@media only screen and (min-width: 1158px) {
-  .section-subtitle {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-  }
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
 }
 .section-descript {
-  font-weight: 500;
+  font-weight: 400;
   color: var(--second-txt-cl);
-}
-@media only screen and (min-width: 1158px) {
-  .section-descript {
-    font-weight: 400;
-  }
 }
 /* Card set */
 .card-set {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   row-gap: var(--indent-row, 48px);
   column-gap: var(--indent-col, 24px);
 }
 .card-set-item {
+  max-width: 264px;
   flex-basis: calc(
-    (100% - var(--indent-col, 24px) * (var(--items, 3) - 1)) / var(--items, 3)
+    (100% - var(--indent-col) * (var(--items) - 1)) / var(--items)
   );
 }
 .card-set-info {
@@ -342,11 +330,12 @@ a {
 /* #endregion */
 /* #region Principles */
 .principles {
-  padding-top: 96px;
+  padding: 96px 0;
 }
 @media only screen and (min-width: 1158px) {
   .principles {
     padding-top: 120px;
+    padding-bottom: 0;
   }
 }
 .principles-list {
@@ -386,10 +375,36 @@ a {
     border-radius: 4px;
   }
 }
+.principles-subtitle {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+}
+@media only screen and (min-width: 1158px) {
+  .principles-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+.principles-descript {
+  font-weight: 500;
+}
+@media only screen and (min-width: 1158px) {
+  .principles-descript {
+    font-weight: 400;
+  }
+}
 /* #endregion */
 /* #region Examples */
 .examples {
-  padding: 120px 0;
+  display: none;
+}
+@media only screen and (min-width: 1158px) {
+  .examples {
+    display: block;
+    padding: 120px 0;
+  }
 }
 /* #endregion */
 /* #region Team */
@@ -398,7 +413,20 @@ a {
   background-color: var(--second-light-txt-cl);
 }
 .team-list {
-  --items: 4;
+  --items: 1;
+  --indent-row: 72px;
+}
+@media only screen and (min-width: 768px) {
+  .team-list {
+    --items: 2;
+    --indent-row: 64px;
+    --indent-col: 24px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .team-list {
+    --items: 4;
+  }
 }
 .team-item {
   box-shadow: 0 2px 1px 0 #2e2f4214, 0 1px 1px 0 #2e2f4229,
