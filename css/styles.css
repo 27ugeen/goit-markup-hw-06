@@ -150,12 +150,25 @@ a {
 }
 .section-subtitle {
   margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+}
+@media only screen and (min-width: 1158px) {
+  .section-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 .section-descript {
+  font-weight: 500;
   color: var(--second-txt-cl);
+}
+@media only screen and (min-width: 1158px) {
+  .section-descript {
+    font-weight: 400;
+  }
 }
 /* Card set */
 .card-set {
@@ -329,23 +342,49 @@ a {
 /* #endregion */
 /* #region Principles */
 .principles {
-  padding-top: 120px;
+  padding-top: 96px;
+}
+@media only screen and (min-width: 1158px) {
+  .principles {
+    padding-top: 120px;
+  }
 }
 .principles-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
 }
-.principles-item {
-  flex-basis: calc((100% - 72px / 4));
+@media only screen and (min-width: 768px) {
+  .principles-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+  .principles-item {
+    flex-basis: 356px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .principles-list {
+    flex-wrap: nowrap;
+  }
+  .principles-item {
+    flex-basis: calc((100% - 72px / 4));
+  }
 }
 .principles-wrapper {
-  height: 112px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--second-light-txt-cl);
-  margin-bottom: 8px;
-  border-radius: 4px;
+  display: none;
+}
+@media only screen and (min-width: 1158px) {
+  .principles-wrapper {
+    display: flex;
+    height: 112px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--second-light-txt-cl);
+    margin-bottom: 8px;
+    border-radius: 4px;
+  }
 }
 /* #endregion */
 /* #region Examples */
