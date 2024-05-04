@@ -1,3 +1,7 @@
+.hide {
+  display: none;
+}
+
 /* #region root */
 :root {
   /* Fonts */
@@ -65,11 +69,6 @@ a {
 }
 /* #endregion */
 /* #region Common styles */
-.container {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -84,6 +83,31 @@ a {
 }
 .current {
   color: var(--focus-cl);
+}
+/* Mobile styles -> base styles */
+.container {
+  min-width: 320px;
+  max-width: 428px;
+  padding: 0 16px;
+  margin: 0 auto;
+  /* max-width: 1158px;
+  padding: 0 15px;
+  */
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+/* Tablet styles */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+/* Desktop styles */
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1128px;
+    padding: 0 15px;
+  }
 }
 /* Logo */
 .logo {
@@ -255,7 +279,7 @@ a {
 .hero {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 188px 0;
+  padding: 112px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -265,15 +289,33 @@ a {
   background-position: center;
   background-size: cover;
 }
+@media only screen and (min-width: 1158px) {
+  .hero {
+    padding: 188px 0;
+  }
+}
 .hero-title {
-  max-width: 496px;
+  max-width: 320px;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   text-align: center;
   color: var(--light-txt-cl);
+}
+@media only screen and (min-width: 768px) {
+  .hero-title {
+    max-width: 496px;
+    margin-bottom: 36px;
+    font-size: 56px;
+    line-height: 1.07;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .hero-title {
+    margin-bottom: 48px;
+  }
 }
 .btn-order {
   margin: 0 auto;
