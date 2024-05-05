@@ -214,6 +214,7 @@ a {
 .header .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .header {
   border-bottom: 1px solid var(--border-cl);
@@ -227,6 +228,11 @@ a {
   align-items: center;
   justify-content: space-between;
   flex-grow: 1;
+}
+@media only screen and (min-width: 768px) {
+  .nav {
+    flex-grow: 0;
+  }
 }
 .nav-list {
   display: flex;
@@ -274,6 +280,12 @@ a {
 .address-list {
   display: flex;
   gap: 40px;
+}
+@media screen and (max-width: 1157px) {
+  .address-list {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 .address-item {
   font-weight: 400;
@@ -821,7 +833,7 @@ input[type='checkbox']:checked
   text-decoration-skip-ink: none;
 }
 /* #endregion */
-/* region common CloseBtn */
+/* #region common CloseBtn */
 .modal-btn,
 .menu-toggle {
   position: absolute;
@@ -917,7 +929,7 @@ input[type='checkbox']:checked
 .mobile-contacts .link {
   font-size: 20px;
   font-weight: 500;
-  line-height: 24px; /* 120% */
+  line-height: 24px;
   letter-spacing: 0.4px;
 }
 .mobile-contacts .link.accent {
