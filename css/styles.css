@@ -161,7 +161,6 @@ a {
   column-gap: var(--indent-col, 24px);
 }
 .card-set-item {
-  max-width: 264px;
   flex-basis: calc(
     (100% - var(--indent-col) * (var(--items) - 1)) / var(--items)
   );
@@ -312,14 +311,55 @@ a {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/portfolio/hero-bg.jpg);
+    url(../images/hero/hero-bg_mob@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/hero-bg_mob@2x.jpg);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/hero-bg_tab@1x.jpg);
+  }
+}
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/hero-bg_tab@2x.jpg);
+  }
+}
 @media only screen and (min-width: 1158px) {
   .hero {
     padding: 188px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/hero-bg_desk@1x.jpg);
+  }
+}
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/hero-bg_desk@2x.jpg);
   }
 }
 .hero-title {
@@ -461,6 +501,7 @@ a {
   }
 }
 .team-item {
+  max-width: 264px;
   box-shadow: 0 2px 1px 0 #2e2f4214, 0 1px 1px 0 #2e2f4229,
     0 1px 6px 0 #2e2f4214;
   border-radius: 0 0 4px 4px;
@@ -537,6 +578,7 @@ a {
 }
 .portfolio-list {
   --indent-row: 48px;
+  justify-content: flex-start;
 }
 .portfolio-info {
   border: 1px solid var(--border-cl);
@@ -754,9 +796,9 @@ a {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%) scale(1);
-  /* width: 408px; */
   /* width: calc(100% - 36px); */
   width: 100%;
+  /* width: 90%; */
   max-width: 392px;
   min-height: 584px;
   padding: 72px 24px 24px;
@@ -769,6 +811,11 @@ a {
   transition-timing-function: cubic-bezier(0.42, 0, 0.21, 1.5);
   transition-property: transform, opacity;
   transition-delay: 600ms;
+}
+@media only screen and (min-width: 768px) {
+  .modal {
+    max-width: 408px;
+  }
 }
 .backdrop.is-hidden .modal {
   transform: translateX(-50%) translateY(-50%) scale(0.3);
